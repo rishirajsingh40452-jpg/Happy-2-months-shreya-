@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+<title>For Khushi ♡ — 2 Months</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Pacifico&family=Montserrat:wght@500;600&display=swap');
+*{box-sizing:border-box}body{margin:0;background:#09050b;overflow:hidden;color:#4d2334;font-family:Montserrat,Arial,sans-serif}
+#app{height:100vh;display:flex;align-items:center;justify-content:center;background:#09050b}
+.screen{position:absolute;width:min(100vw,1100px);height:min(78vw,620px);max-height:78vh;overflow:hidden;opacity:0;pointer-events:none;transform:scale(.96) translateY(18px);transition:opacity .65s,transform .65s}
+.screen.active{opacity:1;pointer-events:auto;transform:scale(1) translateY(0)}
+.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.paper{position:absolute;inset:0;padding:44px 9%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+.paper:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(255,255,255,.18),transparent 35%,rgba(255,255,255,.1));pointer-events:none}
+.content{position:relative;z-index:4;max-width:760px}
+.title{font:700 clamp(42px,7vw,78px)/.95 Pacifico,cursive;color:#a43d60;text-shadow:1px 2px #fff}
+.script{font:clamp(27px,4vw,48px)/1.05 Caveat,cursive;color:#6d3a55}
+.sub{font:16px/1.7 Montserrat;color:#49323d}
+.btn{background:#b84d76;color:#fff;border:0;border-radius:999px;padding:10px 29px;margin:8px;font:26px Caveat;box-shadow:0 6px 0 #873653,0 12px 25px #5c263733;cursor:pointer}
+.btn:active{transform:translateY(4px);box-shadow:0 2px 0 #873653}
+.next{position:absolute;right:18px;bottom:12px;z-index:20;background:#b84d76;color:#fff;border:0;border-radius:999px;padding:6px 18px;font:26px Caveat;cursor:pointer;box-shadow:0 4px 0 #873653}
+.prev{position:absolute;left:18px;bottom:12px;z-index:20;background:#fff9;color:#873653;border:1px solid #b84d76;border-radius:999px;padding:5px 14px;font:22px Caveat}
+.dog{position:absolute;z-index:5;filter:drop-shadow(0 10px 8px #6c3b4330);animation:bob 2.7s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(-8px) rotate(1deg)}} 
+.dog.rose{width:31%;right:7%;top:4%}.dog.good{width:30%;left:35%;top:8%}.dog.party{width:31%;left:34%;top:0}
+.dog img{width:100%;height:auto;display:block}
+.cream{position:absolute;z-index:3;background:#fffdf1e8;border-radius:28px;padding:12px 22px;box-shadow:0 10px 25px #632e4430}
+.hello{top:10%;left:10%;font:clamp(42px,6vw,72px) Pacifico;color:#a33c60}
+.hello2{top:8%;left:9%;font:clamp(36px,5vw,62px) Pacifico;color:#a33c60}
+.letter{width:min(390px,65%);background:linear-gradient(#fffdf5,#f7e7ef);border:1px solid #e0b7c8;padding:25px;box-shadow:0 15px 30px #4c243833;transform:rotate(-2deg)}
+.letter p{font:23px/1.35 Caveat;color:#593747}
+.photo{width:155px;height:190px;object-fit:cover;background:white;padding:8px 8px 30px;box-shadow:0 10px 22px #4c243844;position:absolute;z-index:7}
+.p1{left:12%;top:16%;transform:rotate(-8deg)}.p2{right:12%;top:17%;transform:rotate(8deg)}.p3{left:42%;bottom:9%;transform:rotate(-2deg)}
+.envelope{position:relative;width:360px;height:230px;background:#efcbd9;border:2px solid #d998b5;box-shadow:0 18px 35px #52253b33;cursor:pointer;transform-style:preserve-3d;transition:.8s}
+.envelope:before{content:"";position:absolute;left:0;right:0;top:0;height:130px;background:#f7e0e8;clip-path:polygon(0 0,100% 0,50% 85%);border-bottom:2px solid #d998b5;transform-origin:top;transition:.8s;z-index:2}
+.envelope.open:before{transform:rotateX(180deg)}
+.envelope .seal{position:absolute;left:50%;top:46%;transform:translate(-50%,-50%);width:48px;height:48px;border-radius:50%;background:#b84d76;color:#fff;font:29px Caveat;display:grid;place-items:center;z-index:3}
+.card{position:absolute;left:50%;bottom:20px;transform:translateX(-50%);width:285px;height:170px;background:#fffef7;padding:20px;box-shadow:0 5px 12px #51283a22;transition:.8s;z-index:1}.envelope.open .card{transform:translate(-50%,-120px)}
+.gift{width:210px;height:170px;position:relative;margin:20px auto;cursor:pointer;transform-style:preserve-3d;transition:.8s}
+.gift .box{position:absolute;left:20px;right:20px;bottom:0;height:115px;background:linear-gradient(90deg,#eaa4b7,#f4bdc9,#df8fa9);border-radius:5px;box-shadow:0 16px 22px #5c2b3c44}.gift .lid{position:absolute;left:8px;right:8px;top:35px;height:35px;background:#e894ad;border-radius:5px;z-index:3}.gift .ribbon{position:absolute;left:93px;top:30px;width:24px;height:120px;background:#fff2;z-index:4}.gift .bow{position:absolute;left:75px;top:3px;width:60px;height:45px;z-index:5}.gift .bow:before,.gift .bow:after{content:"";position:absolute;width:38px;height:28px;border:8px solid #fff0;border-radius:50%;background:#f3b3c3}.gift .bow:before{left:-4px;transform:rotate(25deg)}.gift .bow:after{right:-4px;transform:rotate(-25deg)}
+.gift.open{transform:translateY(-8px) scale(1.08)}.gift.open .lid{transform:translateY(-65px) rotate(-7deg);transition:.8s}
+.finalArt{font-size:110px;animation:hug 2s ease-in-out infinite}.finalArt span{display:inline-block}.finalArt span:first-child{transform:translateX(28px)}.finalArt span:last-child{transform:translateX(-28px)}
+@keyframes hug{50%{transform:scale(1.08)}} 
+.heart{position:absolute;color:#c85a7d;animation:heartFloat 3s ease-in-out infinite;z-index:2}.h1{left:20%;top:20%}.h2{right:20%;top:25%}.h3{left:50%;bottom:20%}@keyframes heartFloat{50%{transform:translateY(-16px) scale(1.1);opacity:.7}}
+#music{position:fixed;top:14px;right:14px;z-index:100;border:0;background:#b84d76;color:#fff;width:42px;height:42px;border-radius:50%;font-size:20px}
+#dots{position:fixed;bottom:10px;left:50%;transform:translateX(-50%);z-index:100;display:flex;gap:5px}.dot{width:6px;height:6px;border-radius:50%;background:#fff8}.dot.on{background:#d66b91}
+@media(max-width:600px){.screen{height:76vh}.paper{padding:30px 6%}.photo{width:110px;height:140px}.letter{width:70%}.dog.rose{width:42%;right:3%}.dog.good,.dog.party{width:40%}.sub{font-size:13px}.next{right:9px}.prev{left:9px}}
+</style>
+</head>
+<body>
+<div id="app">
+<section class="screen active" data-i="0"><img class="bg" src="assets/page8.jpg"><div class="paper"><div class="content">
+<div class="title">HEY!!</div><div class="script">I made something especially for you…</div><div class="script">Do you want to see? 👀</div>
+<button class="btn" onclick="go(1)">Yes ♡</button><button class="btn" id="noBtn">No</button></div></div>
+<img class="dog rose" src="assets/dog_rose_crop.jpg"></section>
+
+<section class="screen" data-i="1"><img class="bg" src="assets/page18.jpg"><div class="paper"><div class="content">
+<div class="title" style="font-size:52px">How are you,<br>Khushi?</div><div class="script">I hope you're smiling right now 🌷</div><button class="btn" onclick="go(2)">I'm good ♡</button></div></div><img class="dog good" src="assets/dog_good_crop.jpg"><div class="heart h1">♥</div></section>
+
+<section class="screen" data-i="2"><img class="bg" src="assets/page18.jpg"><div class="paper"><div class="content">
+<div class="script" style="font-size:58px">That's my girl!! 🌻</div><div class="title" style="font-size:43px">I have a tiny question…</div><p class="sub">Do you know what makes today special?</p><button class="btn" onclick="go(3)">Tell me ♡</button></div></div><img class="dog good" src="assets/dog_good_crop.jpg"></section>
+
+<section class="screen" data-i="3"><img class="bg" src="assets/page22.jpg"><div class="paper"><div class="content">
+<div class="title" style="font-size:45px">HAPPY 2 MONTHS<br>KHUSHI 💗</div><div class="script">17 June 2026</div><div class="sub">You are my favourite notification ♡<br>Stay cute, stay happy, stay you.</div><button class="btn" onclick="go(4)">Next →</button></div></div><img class="dog party" src="assets/dog_party_crop.jpg"></section>
+
+<section class="screen" data-i="4"><img class="bg" src="assets/page25.jpg"><div class="paper"><div class="content">
+<div class="title" style="font-size:42px">A little letter<br>for you…</div><div class="envelope" id="env" onclick="openEnv()"><div class="card"><div class="script" style="font-size:30px">Open me, Khushi ♡</div></div><div class="seal">♡</div></div><div class="script" id="envHint" style="font-size:24px">Tap the envelope</div></div></div></section>
+
+<section class="screen" data-i="5"><img class="bg" src="assets/page29.jpg"><div class="paper"><div class="content">
+<div class="letter"><div class="script">Dear Khushi,</div><p>Two months may sound small, but every little memory with you feels bigger than a number.</p><p>Thank you for the smiles, the random conversations and all the moments that quietly became my favourites.</p><div class="script">— Rishi ♡</div></div><button class="btn" onclick="go(6)">Keep reading →</button></div>
+<img class="photo p1" src="assets/khushi1.png"><img class="photo p2" src="assets/khushi2.png"></div></section>
+
+<section class="screen" data-i="6"><img class="bg" src="assets/page29.jpg"><div class="paper"><div class="content">
+<div class="title" style="font-size:46px">My favourite memories<br>look like this.</div><img class="photo p1" src="assets/khushi1.png"><img class="photo p2" src="assets/khushi2.png"><img class="photo p3" src="assets/khushi3.png"><div class="script" style="margin-top:210px">Every memory is my favourite. ♡</div><button class="btn" onclick="go(7)">Next →</button></div></div></section>
+
+<section class="screen" data-i="7"><img class="bg" src="assets/page34.jpg"><div class="paper"><div class="content">
+<div class="title" style="font-size:43px">Here's a surprise<br>for you!!!</div><div class="gift" id="gift" onclick="openGift()"><div class="box"></div><div class="lid"></div><div class="ribbon"></div><div class="bow"></div></div><div class="script" id="giftText">Tap the gift 🎁</div></div></div></section>
+
+<section class="screen" data-i="8"><img class="bg" src="assets/page38.jpg"><div class="paper"><div class="content">
+<div class="title" style="font-size:42px">Here's your<br>virtual hug ♡</div><div class="finalArt">🧸🤍🧸</div><div class="script">Come here, Khushi 🫂</div><div class="sub">If I could, I'd give you this hug for real.</div><button class="btn" onclick="go(9)">One last thing →</button></div><div class="heart h1">♥</div><div class="heart h2">♥</div></div></section>
+
+<section class="screen" data-i="9"><img class="bg" src="assets/page38.jpg"><div class="paper"><div class="content">
+<div class="title" style="font-size:50px">I LOVE YOU ♡</div><div class="script">Happy 2 Months, Shreya — my Khushi.</div><div class="script">17 • 06 • 2026</div><p class="sub">Thank you for being one of the sweetest parts of my days.</p><div class="script">Here's to the next memory… and the next one… and the next. 💗</div></div></div></section>
+</div>
+<button id="music">♫</button><div id="dots"></div>
+<script>
+let cur=0;const ss=[...document.querySelectorAll('.screen')],dots=document.getElementById('dots');
+ss.forEach((_,i)=>{let d=document.createElement('i');d.className='dot'+(i===0?' on':'');dots.appendChild(d)});
+function go(n){cur=Math.max(0,Math.min(ss.length-1,n));ss.forEach((s,i)=>s.classList.toggle('active',i===cur));[...dots.children].forEach((d,i)=>d.classList.toggle('on',i===cur))}
+const no=document.getElementById('noBtn');no.addEventListener('mouseenter',()=>{no.style.transform=`translate(${Math.random()*180-90}px,${Math.random()*80-40}px)`});no.addEventListener('click',()=>go(1));
+function openEnv(){document.getElementById('env').classList.toggle('open');document.getElementById('envHint').textContent='Opened with love ♡';setTimeout(()=>go(5),900)}
+function openGift(){let g=document.getElementById('gift');g.classList.add('open');document.getElementById('giftText').textContent='You found it! 💗';setTimeout(()=>go(8),950)}
+document.addEventListener('keydown',e=>{if(e.key==='ArrowRight')go(cur+1);if(e.key==='ArrowLeft')go(cur-1)});
+document.getElementById('music').onclick=()=>{const C=window.AudioContext||window.webkitAudioContext;if(!window.ac){window.ac=new C();let o=ac.createOscillator(),g=ac.createGain();o.type='sine';o.frequency.value=261.63;g.gain.value=.012;o.connect(g);g.connect(ac.destination);o.start()}else ac.resume()}
+</script>
+</body></html>
